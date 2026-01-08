@@ -23,10 +23,10 @@ console.log(nullExample)
 let bigIntExample = 100n
 console.log(bigIntExample)
 // BigInt -> Number & Number -> BigInt
-let parseToNumberExample = Number(l8)
-let parseToBigIntExample = BigInt(l2)
-console.log(l9)
-console.log(l10)
+let parseToNumberExample = Number(bigIntExample)
+let parseToBigIntExample = BigInt(numberExample1)
+console.log(parseToNumberExample)
+console.log(parseToBigIntExample)
 // Boolean
 let booleanExample1 = false
 let booleanExample2 = true
@@ -121,4 +121,47 @@ let sizeArrayExample7 = new Uint32Array([0 , 4294967295]) // 0 ~ 4294967295
 let sizeArrayExample8 = new Float32Array([-3.4e38 , 3.4e38]) // -3.4e38 ~ 3.4e38
 let sizeArrayExample9 = new Float64Array([-1.8e308 , 1.8e308]) // -1.8e308 ~ 1.8e308
 let sizeArrayExample10 = new BigInt64Array() // -9223372036854775808n ~ 9223372036854775807n
-// 
+// Equal
+console.log("1" == 1)
+console.log("1" == 2)
+console.log(Object.is("12",'15'))
+console.log(Object.is("12",15))
+console.log("1" === "1")
+console.log("1" === 1)
+// Loop
+// For Loop
+for (var i = 0;i<5 ;i++){
+        console.log(i)
+}
+// While Loop
+let whileExample = 5
+while (whileExample > 0){
+        console.log(whileExample)
+        whileExample--
+}
+// Do While Loop
+let doWhileExample = ""
+let doWhileCounter = 0
+do {
+        doWhileExample += doWhileCounter
+        doWhileCounter++
+}while(doWhileCounter < 5)
+console.log(doWhileExample)
+// Continue
+let continueExample = ""
+for (var i = 0; i <= 10;i++){
+        if (i % 3 === 0){
+                continue
+        }
+        continueExample += i
+}
+console.log(continueExample)
+// Break
+let breakExample = 0
+while (true){
+        if (breakExample === 5){
+                break
+        }
+        console.log(breakExample)
+        breakExample++
+}
