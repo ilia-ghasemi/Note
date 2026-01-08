@@ -213,4 +213,28 @@ switch (switchExpression){
                 break
 }
 console.log(switchExpression)
-// Exception
+// Exception (throw , try ,catch , finally)
+let exceptionExample = parseInt(Math.random() * 100) // Create random Intiger from 0 to 100
+
+try {
+        if (exceptionExample % 2){
+                throw new Error("Its odd")
+        }
+        
+}catch(e){
+        console.log(e)
+}finally{
+      console.log(exceptionExample)  
+}
+// Error 
+let errorExample1 = new Error("Some text")
+let errorExample2 = new SyntaxError("Some text")
+let errorExample3 = new AggregateError("Some text")
+let errorExample4 = new ReferenceError("Some text")
+let errorExample5 = new EvalError("Some text")
+let errorExample6 = new TypeError("Some text")
+let errorExample7 = new URIError("Some text")
+let errorExample8 = new RangeError("Some text")
+// Short if
+let shortIfExample = parseInt(Math.random() * 100) 
+console.log(`${shortIfExample % 2 ? "Odd" : "Evan"} | ${shortIfExample}`)
