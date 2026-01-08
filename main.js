@@ -235,6 +235,183 @@ let errorExample5 = new EvalError("Some text")
 let errorExample6 = new TypeError("Some text")
 let errorExample7 = new URIError("Some text")
 let errorExample8 = new RangeError("Some text")
+// Operators
 // Short if
 let shortIfExample = parseInt(Math.random() * 100) 
 console.log(`${shortIfExample % 2 ? "Odd" : "Evan"} | ${shortIfExample}`)
+// Comma 
+let commaExample = 1
+commaExample = (commaExample++ , commaExample)
+console.log(commaExample)
+// Unary
+// Delete
+let deleteExample1 = {
+        firstName : "Ilia",
+        lastName : "Ghasemi"
+}
+console.log(deleteExample1.firstName)
+delete deleteExample1.firstName
+console.log(deleteExample1.firstName)
+// Void
+let voidExample = void 1
+console.log(voidExample)
+void (function voidFunctionExample1() {
+        console.log("Void Function Example 1")
+}())
+void function voidFunctionExample2() {
+  console.log("Void Function Example 2");
+};
+try{
+        voidFunctionExample2()
+}catch(e){
+        console.log("Void Function Example 2 Not Defined")
+}
+// Type Of
+console.log(typeof 32)
+console.log(typeof "Some Text")
+console.log(typeof true)
+console.log(typeof undefined)
+console.log(typeof objectExample)
+// Plus
+console.log(+1)
+console.log(+(-1))
+console.log(+"")
+console.log(+false)
+console.log(+true)
+console.log(+null)
+console.log(+undefined)
+// Minus
+console.log(-(5))
+console.log(-"5")
+// Bitwise Not
+let bitwiseExample1 = 5 // 00000000000000000000000000000101
+let bitwiseExample2 = -3 // 11111111111111111111111111111101
+console.log(~bitwiseExample1) // ~bitwiseExample1 = 11111111111111111111111111111010
+console.log(~bitwiseExample2) // ~bitwiseExample2 = 11111111111111111111111111111101
+// Logical NOT
+console.log(`Not true : ${!true}`)
+console.log(`Not false : ${!false}`)
+// Await 
+function Sleep(x,y){
+        return new Promise((resolve) => {
+                setTimeout(() => {
+                        resolve(y);
+                }, x * 1000);
+})}
+async function awaitExampleFunction() {
+        let awaitExample = await Sleep(0,"Some Text")
+        console.log(awaitExample)
+}
+awaitExampleFunction()
+// Assignment
+function addOne(){
+        return 1
+}
+let assignmentExample = addOne()
+console.log(assignmentExample)
+assignmentExample += addOne()
+console.log(assignmentExample)
+assignmentExample -= addOne()
+console.log(assignmentExample) 
+// And Other Assignment Operators
+// Comparison
+console.log("2" == 2)
+console.log(2 > 3)
+console.log(2 < 3)
+console.log(2 <= 3)
+console.log(2 >= 3)
+console.log(2 === "2")
+console.log(2 !== "2")
+console.log(2 != "2")
+// Arithmetic
+let arithmeticExample = 10
+console.log(`{ 10 + 2 = ${10 + 2}}`)
+console.log(`{ 10 - 2 = ${10 - 2}}`)
+console.log(`{ 10 * 2 = ${10 * 2}}`)
+console.log(`{ 10 ** 2 = ${10 ** 2}}`)
+console.log(`{ 10 / 2 = ${10 / 2}}`)
+console.log(`{ 10 % 2 = ${10 % 2}}`)
+console.log(`{ arithmeticExample = ${arithmeticExample}}`)
+arithmeticExample++
+console.log(`{ arithmeticExample ++ = ${arithmeticExample}}`)
+arithmeticExample--
+console.log(`{ arithmeticExample -- = ${arithmeticExample}}`)
+// Bitwise
+console.log(true & true)
+console.log(true & false)
+console.log(true | true)
+console.log(false | false)
+console.log(true ^ true)
+console.log(false ^ false)
+console.log(true ^ false)
+console.log(~true)
+console.log(~false)
+console.log(1 << 5)
+console.log(1000 >> 5)
+console.log(10000 >>> 5)
+// Logical
+console.log(true || true)
+console.log(true || false)
+console.log(true && true )
+console.log(true && false)
+console.log(!true)
+console.log(!false)
+console.log(0 ?? 42)
+console.log(1 ?? 42)
+// String
+let stringExample = ""
+for (var i = 0; i < 5 ; i++){
+        stringExample += i
+}
+console.log(stringExample)
+console.log("Some Text" + "Some Other Text " + stringExample)
+// Function
+// Normall Function
+function functionExample1(arg1,arg2){
+        return arg1 * arg2
+}
+console.log(functionExample1(2,5))
+function functionExample2(...Arg){
+        let ans = ""
+        for (const i of Arg){
+                ans += i
+        }
+        return ans
+}
+console.log(functionExample2("H","e" ,"l" ,"l","o"))
+// Arrow Function
+let arrowFunction = (x,y) => {return x*y}
+console.log(arrowFunction(100 , 20));
+(async() => {
+        const l = 9
+        const u = 1
+        console.log(`x + y : ${l+u}`);
+})();
+let functionExample3 = (x,y) => {return x * y}
+console.log(functionExample3(4,5))
+// Functional Programming
+function functionExample4(){
+        var x = "function Example 4"
+        function functionExample5(){
+                console.log(x)
+        }
+        return functionExample5()
+}
+functionExample4()
+let functionExample6 = (function (x,y,z){
+        var vFE1 = x
+        var vFE2 = y
+        var vFE3 = z 
+        function add(){
+                return vFE1 + vFE2 + vFE3
+        }
+        function multi(){
+                return vFE1 * vFE2 * vFE3
+        }
+        return {
+                add : add(),
+                multi : multi()
+        }
+})
+console.log(functionExample6(2,3,4))
+// DOM
