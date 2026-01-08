@@ -1,3 +1,8 @@
+{
+        Name = "JS Note"
+        CreateBy = "Ilia-Ghasemi"
+        GitHub = "https://github.com/ilia-ghasemi"
+}
 // Variable & String
 const constExample = 'This is some : Const'
 var varExample = "This is some : Var"
@@ -109,7 +114,7 @@ console.log(arrayExample3)
 console.log(arrayExample1.reverse())
 console.log(arrayExample1.at(2))
 console.log(arrayExample1.slice(2))
-// Search Array method 
+// Search Array method !
 // Size Array
 let sizeArrayExample1 = new Int8Array([-128,127]) // -128 ~ 127
 let sizeArrayExample2 = new Uint8Array([0,255]) // 0 ~ 255
@@ -165,3 +170,47 @@ while (true){
         console.log(breakExample)
         breakExample++
 }
+// For Of Loop
+let forOfExample = ['a','b','c']
+for (const i of forOfExample){
+        console.log(i)
+}
+// For In Loop
+let forInExample = {a:1,b:2,c:3}
+for (let i in forInExample){
+        console.log(`{${i} : ${forInExample[i]}}`)
+}
+// If & Else
+let ifExample = parseInt(Math.random() * 100) // Create random Intiger from 0 to 100
+if (ifExample % 3 === 0){
+        console.log(`${ifExample} => 3 | ifExample`)
+}
+else if (ifExample % 3 === 1){
+        console.log(`${ifExample} => 3 | ifExample - 1`)
+}
+else{
+        console.log(`${ifExample} => 3 | ifExample + 1`)
+}
+// Switch
+let switchExample = parseInt(Math.random() * 100) // Create random Intiger from 0 to 100
+let switchExpression = switchExample % 4
+switch (switchExpression){
+        
+        case 0:
+                console.log(`${switchExample} => 4 | switchExample`)
+                break
+        case 1:
+                console.log(`${switchExample} => 4 | switchExample - 1`)
+                break
+        case 2:
+                console.log(`${switchExample} => 4 | switchExample - 2`)
+                break
+        case 3:
+                console.log(`${switchExample} => 4 | switchExample - 3`)
+                break
+        default:
+                console.log(`${switchExample} is Not Intiger`)
+                break
+}
+console.log(switchExpression)
+// Exception
